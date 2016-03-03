@@ -1,11 +1,13 @@
-package com.coolweather.app.model;
+package com.coolweather.app.db;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.coolweather.app.db.CoolWeatherOpenHelper;
+import com.coolweather.app.model.City;
+import com.coolweather.app.model.County;
+import com.coolweather.app.model.Province;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,9 +74,9 @@ public class CoolWeatherDB {
                 list.add(province);
             }while (cursor.moveToNext());
         }
-        if (cursor !=null){
+        /*if (cursor !=null){
             cursor.close();
-        }
+        }*/
         return list;
     }
     /*
@@ -109,9 +111,9 @@ public class CoolWeatherDB {
                 list.add(city);
             }while (cursor.moveToNext());
         }
-        if (cursor !=null){
+        /*if (cursor !=null){
             cursor.close();
-        }
+        }*/
         return list;
     }
 
@@ -146,9 +148,9 @@ public class CoolWeatherDB {
                 list.add(county);
             }while (cursor.moveToNext());
         }
-        if (cursor !=null){
+        /*if (cursor !=null){
             cursor.close();
-        }
+        }*/
         return list;
     }
 }
